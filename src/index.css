@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Manrope:wght@300;400;500;600&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Syne", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --color-brand-green: #34d399;
+  --color-brand-green-dark: #059669;
+  --color-surface-base: #0a0a0f;
+
+  --animate-fade-up: fadeUp 0.5s ease both;
+  --animate-fade-up-1: fadeUp 0.5s ease 0.1s both;
+  --animate-fade-up-15: fadeUp 0.5s ease 0.15s both;
+  --animate-fade-up-2: fadeUp 0.5s ease 0.2s both;
+  --animate-fade-up-25: fadeUp 0.5s ease 0.25s both;
+  --animate-fade-up-3: fadeUp 0.5s ease 0.3s both;
+  --animate-fade-up-35: fadeUp 0.5s ease 0.35s both;
+  --animate-fade-up-4: fadeUp 0.5s ease 0.4s both;
+  --animate-fade-up-6: fadeUp 0.6s ease both;
+  --animate-pulse-slow: pulseSlow 8s ease-in-out infinite;
+  --animate-pulse-slow-d: pulseSlow 10s ease-in-out 2s infinite;
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes pulseSlow {
+    0%,
+    100% {
+      opacity: 0.15;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.25;
+      transform: scale(1.04);
+    }
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: #0a0a0f;
+  font-family: "Manrope", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 9999px;
+}
